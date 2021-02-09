@@ -1,0 +1,40 @@
+<div class="jumbotron">
+  <h1 style="text-align: center;">User Booked Bike Details</h1>
+  <!-- <p style="font-weight: italic; text-align: center;">Lets go for drive </p> -->
+  <br>
+  
+
+    <div class='card-body'>            
+        <div class='table-responsive'>
+          <table class='table'>
+               
+            <thead>
+              <tr>
+                <th>Model Name</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Contact No</th>
+                <th>Email</th>
+               <th>Preferred Date</th>
+               <th>Test Drive</th> 
+               
+              </tr>
+             
+            </thead>
+            <tbody>  
+                <tr *ngFor='let bookcar of bookcars'>
+                    <td>{{bookcar.bookid1}}</td>
+                    <td>{{bookcar.bookName1}}</td>
+                    <td>{{ bookcar.bookadd1 }}</td>
+                    <td>{{bookcar.bookcontact1 }}</td>
+                    <td>{{ bookcar.bookemail1}}</td>
+                   <td>{{bookcar.bookdate1}}</td>
+                  <td>{{bookcar.bookdrive1}}</td>
+                  <button class="btn btn-danger" style="cursor:pointer;color: black;" (click)="bookcaremail()" *ngIf="_auth.loggedIn() && userType == 'dealer'"> send email</button> 
+                  </tr>              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    

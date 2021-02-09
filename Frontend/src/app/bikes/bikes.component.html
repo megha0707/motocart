@@ -1,0 +1,49 @@
+
+    
+    <div class="container">
+      <div class="jumbotron">
+          <h1 style="text-align: center;">Top Brands</h1>
+          <p style="font-weight: italic; text-align: center;">Lets go for drive </p>
+          <br><marquee behavior=”scroll” style="color: #330033;" direction=”left” height=”10″>
+          <button type= "button" class="btn btn-danger">Honda</button>
+          <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Royal Enfield</button>
+          <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Yamaha</button>
+          <button type= "button" class="btn btn-danger" style="margin-left:20px ;">TVS</button>
+          <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Suzuki</button>
+          <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Bajaj</button>
+        </marquee>
+      </div>
+   
+    
+         <!-- //?/?// -->
+
+         <div class="jumbotron">
+          <div class="card-deck">
+          <div *ngFor="let product of products"> 
+
+             <!-- <div class="card p-3">   -->
+          
+        <div class="card mb-3" style="max-width: 640px;">
+            <div class="column no-gutters">
+              
+              <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 p-2"> 
+                <img [src]="product.imageUrl" style="width:200px;height:200px" class="card-img" alt="" > 
+              </div>
+              <div class="col-md-12">
+                <div class="card-body">
+                  <h4 class="card-title">{{product.productName}}</h4>
+                  <h6 class="card-text">Mileage: {{product.releaseDate}}</h6>
+                    <h6 class="card-text">Price: {{product.price}}</h6>
+                    <h6 class="card-text"> Cubic Capacity:{{product.starRating}}</h6>
+                    <!-- <button class="btn btn-danger" style="cursor:pointer" *ngIf="!_auth.loggedIn()"(click)="deleteProduct(product)"> Book</button> -->
+                    <button class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.loggedIn() && userType =='admin'" (click)="editProduct(product)" style="margin-left: 20px;"> Edit</button>
+                    <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn() && userType =='admin' "(click)="deleteProduct(product)"> Delete</button> 
+                      <button (click)="readProduct(product)" *ngIf="_auth.loggedIn() && userType == 'user'" class="text-muted btn btn-outline-primary btn-sm">Know More</button>
+                  </div>
+                 </div>
+                  </div>
+                </div>
+              </div><br>
+            </div>
+          </div>
+        </div> 

@@ -1,0 +1,48 @@
+
+<div class='card'>
+    <form (ngSubmit)="editProduct()">
+<div class='card-header'>
+ Edit Bike
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+      
+            <tr>
+                <td><label>Model Name</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="productItem.productName"/></td>                  
+              </tr>  
+                
+              <tr>
+                <td><label>Mileage</label></td>
+                <td><input type="text" name="p_date" [(ngModel)]="productItem.releaseDate"/></td>                  
+              </tr>  
+             
+              <tr>
+                <td> <label>Price</label></td>
+                <td><input type="text" name="p_price" [(ngModel)]="productItem.price"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>Cubic Capacity</label></td>
+                <td><input type="text" name="p_price1" [(ngModel)]="productItem.starRating"/></td>                  
+              </tr>  
+              <tr>
+                <tr>
+                  <td><label>Seat Height</label></td>
+                  <td><input type="text" name="p_image1" [(ngModel)]="productItem.productCode"/></td>                  
+                </tr> <tr>
+                <td><label> ImageUrl</label></td>
+                <td><input type="text" name="p_image" [(ngModel)]="productItem.imageUrl"/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>

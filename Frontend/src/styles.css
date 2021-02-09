@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+ body{
+    margin: 0;
+    padding: 0; 
+     background-image: url(assets/images/clear.jpeg );
+    
+      -webkit-background-size: cover;  
+     background-size: cover; 
+    font-family : Poppins; 
+     background-attachment: fixed; 
+       background-repeat: no-repeat;  
+    } 

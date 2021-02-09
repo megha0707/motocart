@@ -1,0 +1,27 @@
+
+          <div class="wrapper">
+          <form  #userlogin="ngForm" (ngSubmit)="loginUser()"  >
+            <div >
+              <h1 style="text-align: center; font-family: 'Bad Script', cursive;">Sign In </h1>
+              <label>Username</label>
+              <input type="text"  class="form-control"  name="uname" #uname="ngModel" [(ngModel)]="user.uname"  required/>
+               <small class="text-danger" [class.d-none]="uname.touched">This Field is required</small> 
+              </div>
+            <div>
+              <label>Password</label>
+              <input type="password"  class="form-control" name="password" #password="ngModel" [(ngModel)]="user.password" required/>
+              <small class="text-danger" [class.d-none]="password.touched">This Field is required</small> 
+              </div>
+            
+            <button type="submit" class="btn btn-success float-right" [disabled]="userlogin.form.invalid">Login</button>
+            <br>
+            <hr>
+            <small> New User? Sign Up <a routerLink="/signup"> here</a>! </small>
+            <hr>
+            <small>  <a routerLink="/adminlogin">Sign In as Admin</a> </small> 
+          <hr>
+            <small>  <a routerLink="/dealerlogin">Sign In as CarDealer</a> </small> <hr>
+            <small>  <a routerLink="/bikedealerlogin">Sign In as BikeDealer</a> </small> 
+          </form>                             
+        </div>
+      

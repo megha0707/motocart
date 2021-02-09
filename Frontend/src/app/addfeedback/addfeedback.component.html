@@ -1,0 +1,26 @@
+<div class="wrapper">
+   
+    <form (ngSubmit)="Feedback()" #userlogin="ngForm">
+    
+     
+        <input type="text" placeholder=" ModelName" name="f_id1"  class="form-control" [(ngModel)]="feedbackItem.feedbackid" #f_id1="ngModel" required/>      
+     
+     <br>
+          
+             <input type="text" placeholder="Customer Name" name="f_id"  class="form-control" [(ngModel)]="feedbackItem.feedbackName" #f_id="ngModel" required/>      
+        
+         <br>
+        
+            <input type="text" placeholder="Comments" name="f_name"  class="form-control" [(ngModel)]="feedbackItem.feedbackadd" #f_name="ngModel" required/> 
+          
+          <br>
+         <label>Rating</label><br>
+            <!-- <input type="text" placeholder="Star Rating" name="f_code"  class="form-control" [(ngModel)]="feedbackItem.feedbackrating" #f_code="ngModel" required/>   -->
+            <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false" name="f_code" class="form-control"  [(ngModel)]="feedbackItem.feedbackrating" #f_code="ngModel" ></ngb-rating>
+        <br>
+     
+          <button type="submit" value="Submit" class="btn btn-success"  [disabled]="userlogin.form.invalid">Submit</button>
+          
+        </form>
+                      
+         </div>    

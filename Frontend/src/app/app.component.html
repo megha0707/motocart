@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
+  <nav class="navbar navbar-expand-lg mynav  " >
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+    <ul class="navbar-nav navbar-right">
+      <img class="img-fluid" src="assets/images/logo.jpg" width="60" height="60">
+      <h4 style="font-family: Segoe Print, Times, serif ;">MotoCart</h4>
+      <a class="nav-link"  routerLink="/homes"></a>
+      <a class="nav-link"  routerLink="/home">Home</a>
+      
+        <a class="nav-link"  routerLink="/signup" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Signup</a>
+        <a class="nav-link"  routerLink="/login" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Login</a>
+    
+        <a class="nav-link"  routerLink="/products">Bikes</a>
+        <a class="nav-link"   routerLink="/authors">Cars</a>
+        <a class="nav-link"  routerLink="/cardetails" *ngIf="_auth.loggedIn() &&   userType =='dealer' ">CarDetails</a>
+        <a class="nav-link"  routerLink="/bikedetails" *ngIf="_auth.loggedIn() &&   userType =='bikedealer' ">BikeDetails</a>
+        <a class="nav-link"  routerLink="/addfeedback" *ngIf="_auth.loggedIn()  && userType =='user'">Add Feedback</a>
+        <a class="nav-link"   routerLink="/feedbackdetails">Feedbacks</a>
+        <a class="nav-link" style="cursor:pointer" *ngIf="_auth.loggedIn() &&   userType =='admin' " (click)="loggedUser()">Add Bike</a>
+        <a class="nav-link"  *ngIf="_auth.loggedIn() &&   userType =='admin' " routerLink="/addauthor" >Add Car</a>
+        <a class="nav-link" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+    </ul>
+    
+  </div>
+
+</nav>  
+
+
+  
+  
+          
+          
+
+<!-- <div class="container"> -->
+  <!-- <router-outlet></router-outlet>      -->
+  <router-outlet></router-outlet>
+<!-- </div> -->

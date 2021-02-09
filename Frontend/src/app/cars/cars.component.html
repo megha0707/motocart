@@ -1,0 +1,55 @@
+
+   
+    <div class="container">
+      <div class="jumbotron">
+          <h1 style="text-align: center;">Top Brands</h1>
+          <p style="font-weight: italic; text-align: center;">Lets go for drive </p>
+          <br>
+          <marquee behavior=”scroll” style="color: #330033;" direction=”left” height=”10″>
+            <button type= "button" class="btn btn-danger">Volkswagen</button>
+            <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Mahindra</button>
+            <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Hyundai</button>
+            <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Toyota</button>
+            <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Maruti Suzuki</button>
+            <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Tata</button>
+            <button type= "button" class="btn btn-danger" style="margin-left:20px ;">Kia</button>
+          </marquee>
+      </div>
+   
+    
+         <!-- //?/?// -->
+
+         <div class="jumbotron">
+          <div class="card-deck">
+          <div *ngFor="let author of authors"> 
+
+             <!-- <div class="card p-3">   -->
+          
+        <div class="card mb-3" style="max-width: 640px;">
+            <div class="column no-gutters">
+              
+              <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 p-2"> 
+                <img [src]="author.imageUrl" style="width:200px;height:200px" class="card-img" alt="" > 
+              </div>
+              <div class="col-md-12">
+                <div class="card-body">
+                  <h4 class="card-title">{{author.authorName}}</h4>
+                  <h6 class="card-text">Seating Capacity:{{author.genre}}</h6>
+                    <h6 class="card-text">Price: {{author.works}} </h6>
+                    <h6 class="card-text">Fuel Type:{{author.country}} </h6>
+                    <!-- <button class="btn btn-danger" style="cursor:pointer" *ngIf="!_auth.loggedIn()"(click)="deleteProduct(product)"> Book</button> -->
+                    <button class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.loggedIn() && userType =='admin'" (click)="editAuthor(author)" style="margin-left: 20px;"> Edit</button>
+                    <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn() && userType =='admin'"(click)="deleteAuthor(author)"> Delete</button> 
+                      <button (click)="readAuthor(author)" *ngIf="_auth.loggedIn() && userType == 'user' " class="text-muted btn btn-outline-primary btn-sm">Read More</button>
+                  </div>
+                 </div>
+                  </div>
+                </div>
+              </div><br>
+            </div>
+          </div>
+        </div>     
+    
+               
+        
+     

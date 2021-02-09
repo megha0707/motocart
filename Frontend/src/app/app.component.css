@@ -1,0 +1,24 @@
+section{
+  background-color: #663399;
+}
+
+.mynav {
+  background-color:#330033;
+  /* background-color: #663399; */
+  color:#fff;
+  margin-bottom: 0;
+  border-width: 0;
+  max-height: 700px;
+} 
+.mynav .collapse ul a{
+  color:white;
+  /* font-size:10px;
+  text-transform: uppercase; */
+  letter-spacing:.05em;
+  font-weight: 400;
+  /* font-size: large; */
+  padding: 10px;
+}
+h4{
+  margin-top: 10px;
+}

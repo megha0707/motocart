@@ -1,0 +1,26 @@
+mdb-carousel-item{
+     background-attachment: fixed; 
+     background-size: cover;    
+    background-repeat: no-repeat;
+}section{
+     background-color: #663399;
+   }
+   h1,p{
+     text-align: center;
+   }
+   .head {
+    position: absolute;
+    bottom: 0;
+    color: #f1f1f1; 
+    width: 20%; 
+    height: 10%;
+    margin-left: 50px;
+    /* margin-right:990px; */
+    margin-bottom: 620px;
+    /* margin-top: 150px; */
+    background-color: blue;
+  }.set{
+    background-color: cadetblue;
+    height:40px;
+    text-align: center;
+  }

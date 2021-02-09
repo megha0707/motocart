@@ -1,0 +1,51 @@
+
+    <h1 style="text-align: center; font-style: oblique;">Reviews</h1>
+    <!-- <p style="font-weight: italic; text-align: center;">Lets go for drive </p> -->
+    <br>
+  
+      <!-- <div class='card-body'>            
+          <div class='table-responsive'>
+            <table class='table'>
+                 
+              <thead>
+                <tr>
+                  <th>Model Name</th>
+                  <th>Name</th>
+                  
+                 <th>Comments</th>
+                 <th>Starrating</th>
+                </tr>
+               
+              </thead>
+              <tbody>  
+                  <tr *ngFor='let feedback of feedbacks'>
+                      <td>{{feedback.feedbackid}}</td>
+                      <td>{{feedback.feedbackName}}</td>
+                      <td>{{feedback.feedbackadd }}</td>
+                      <td>{{feedback.feedbackrating }}</td>
+                 
+                    </tr>              
+              </tbody>
+            </table>
+          </div>
+        </div> -->
+        <div *ngFor='let feedback of feedbacks'>
+         
+        <div class="card-columns p-3">
+          <div class="card mb-3" style="max-width: 840px;">
+            <div class="row no-gutters">
+             
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h4 class="card-title">Model Name:{{feedback.feedbackid}}</h4>
+                  <p class="card-text">Customer Name:{{feedback.feedbackName}}<p>
+                    <p class="card-text">Comments:{{feedback.feedbackadd}}<p>
+                    <p class="card-text">Star Rating:{{feedback.feedbackrating}}<p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+  

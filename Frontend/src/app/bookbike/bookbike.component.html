@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <!-- <div class="container containtop" style="margin-left:5%;margin-right:5% ; max-width: 70%; margin-top:-24px"> -->
+  <form (ngSubmit)="BookBike()" #userlogin="ngForm">
+    <!-- <div class="form-way form-group"> -->
+   
+      <input type="text" placeholder=" ModelName" name="b_id1"  class="form-control" [(ngModel)]="bookItem.bookid" #b_id="ngModel" required/>      
+   
+   <br>
+        
+           <input type="text" placeholder="Name" name="b_id"  class="form-control" [(ngModel)]="bookItem.bookName" #b_id="ngModel" required/>      
+      
+       <br>
+      
+          <input type="text" placeholder="Address" name="b_name"  class="form-control" [(ngModel)]="bookItem.bookadd" #b_name="ngModel" required/> 
+        
+        <br>
+       
+          <input type="text" placeholder="Contact no" name="b_code"  class="form-control" [(ngModel)]="bookItem.bookcontact" #b_code="ngModel" required/>  
+      
+      <br>
+   
+          <input type="text" placeholder="Email" name="b_date"  class="form-control" [(ngModel)]="bookItem.bookemail" #b_date="ngModel" required/> 
+          <br>
+          
+          <input type="text" placeholder="Preferred date" name="b_date1"  class="form-control" [(ngModel)]="bookItem.bookdate" #b_date1="ngModel" required/> 
+          <br>
+          <label>Do you want test drive</label>
+        <select ng-model="selectedName" ng-options="" name="b_drive"   [(ngModel)]="bookItem.bookdrive" #b_drive="ngModel" >
+          <option>Yes</option>
+          <option>No</option>
+          </select>
+         <br>
+          <br>
+        <button type="submit" value="Submit" class="btn btn-success"  [disabled]="userlogin.form.invalid">Submit</button>
+        
+      </form>
+                    
+       </div>    

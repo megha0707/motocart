@@ -1,0 +1,53 @@
+
+
+<div class='card'>
+    <form (ngSubmit)="editAuthor()">
+<div class='card-header'>
+ Edit Car
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+      
+            <tr>
+                <td><label>Model</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="authorItem.authorName"/></td>                  
+              </tr>  
+              
+              <tr>
+                <td><label>Seating Capacity</label></td>
+                <td><input type="text" name="p_date" [(ngModel)]="authorItem.genre"/></td>                  
+              </tr>  
+             
+              <tr>
+                <td> <label>Price</label></td>
+                <td><input type="text" name="p_price" [(ngModel)]="authorItem.works"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>Fuel Type</label></td>
+                <td><input type="text" name="p_fuel" [(ngModel)]="authorItem.country"/></td>                  
+              </tr> 
+              <tr>
+                <td> <label>Transmission</label></td>
+                <td><input type="text" name="p_fuel1" [(ngModel)]="authorItem.authorCode"/></td>                  
+              </tr> 
+              <tr>
+                <td> <label>Mileage</label></td>
+                <td><input type="text" name="p_fuel2" [(ngModel)]="authorItem.description"/></td>                  
+              </tr> 
+              <tr>
+                <td><label> imageUrl</label></td>
+                <td><input type="text" name="p_image" [(ngModel)]="authorItem.imageUrl"/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>

@@ -1,0 +1,30 @@
+
+    <div class="jumbotron">
+      
+      <!-- <div *ngFor="let product of products">   -->
+
+         <div class="card p-3">  
+      
+    <div class="card mb-3" style="max-width: 440px;">
+        <div class="column no-gutters">
+          
+          <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 p-2"> 
+            <img [src]="productItem.imageUrl" style="width:400px;height:400px" class="card-img" alt="" > 
+            <!-- <img [src]="productItem.productCode" style="width:400px;height:400px" class="card-img" alt="" >  -->
+          </div>
+        
+          <div class="col-md-12">
+            <div class="card-body">
+              <h4 class="card-title">{{productItem.productName}}</h4>
+              <h5 class="card-text">Mileage: {{productItem.releaseDate}}</h5>
+                <h5 class="card-text">Price: {{productItem.price}}</h5>
+                <h5 class="card-text">Cubic Capacity:{{productItem.starRating}}</h5>
+                <h5 class="card-text">Seat Height:{{productItem.productCode}}</h5>
+                 <button class="btn btn-danger" style="cursor:pointer" (click)="bookbike()" *ngIf="_auth.loggedIn() && userType == 'user'"> Book</button> 
+             <!-- </div> -->
+              </div>
+            </div>
+          </div><br>
+        </div>
+      </div>
+    </div> 

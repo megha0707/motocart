@@ -1,0 +1,40 @@
+
+/* #masthead {
+    min-height:199px;
+    background-color:lightblue;
+    color:#aaaacc;
+  } */
+  
+  #masthead h1 {
+    font-size: 55px;
+    line-height: 1;
+    color:black;
+    margin-top:50px;
+  }
+  
+  #masthead .well {
+    margin-top:31px;
+    background-color:rgb(50, 65, 56);
+    border-color:#000022;
+    color:#efefff;
+    min-height:150px;
+  }
+  
+  #topPanel {
+    padding-top:0px;
+    padding-left:22px;
+    padding-right:22px;
+  }
+  #topPanel .panel-body {
+    padding-top:0px;
+  }
+  .top-spacer {
+    background-color:black;
+    height:40px;
+    width:100%;
+  } 
+  
+  a,a:hover {
+    color:#223344;
+    text-decoration:none;
+  }
