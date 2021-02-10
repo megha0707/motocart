@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+mongoose.connect('mongodb+srv://userone:userone@meghafiles.hithu.mongodb.net/MOTOAPP?retryWrites=true&w=majority');
 const Schema = mongoose.Schema;
 
 var NewBookcarSchema = new Schema({

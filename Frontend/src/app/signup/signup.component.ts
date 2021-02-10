@@ -44,7 +44,7 @@ export class SignupComponent implements OnInit {
   getSignup () {
     this.submitted = true;
     if (this.registerForm.valid) {
-      alert('Form Submitted succesfully!!!.');
+      alert('Account created succesfully!!!.');
       console.table(this.registerForm.value);
        this.signupService.getSignup(this.registerForm.value);
        this._auth.getSignup(this.registerForm.value)
